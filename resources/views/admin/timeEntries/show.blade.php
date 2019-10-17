@@ -3,7 +3,7 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.user.title') }}
+        {{ trans('global.show') }} {{ trans('cruds.timeEntry.title') }}
     </div>
 
     <div class="card-body">
@@ -12,44 +12,42 @@
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.user.fields.id') }}
+                            {{ trans('cruds.timeEntry.fields.id') }}
                         </th>
                         <td>
-                            {{ $user->id }}
+                            {{ $timeEntry->id }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.user.fields.name') }}
+                            {{ trans('cruds.timeEntry.fields.work_type') }}
                         </th>
                         <td>
-                            {{ $user->name }}
+                            {{ $timeEntry->work_type->name ?? '' }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.user.fields.email') }}
+                            {{ trans('cruds.timeEntry.fields.project') }}
                         </th>
                         <td>
-                            {{ $user->email }}
+                            {{ $timeEntry->project->name ?? '' }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.user.fields.email_verified_at') }}
+                            {{ trans('cruds.timeEntry.fields.start_time') }}
                         </th>
                         <td>
-                            {{ $user->email_verified_at }}
+                            {{ $timeEntry->start_time }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Roles
+                            {{ trans('cruds.timeEntry.fields.end_time') }}
                         </th>
                         <td>
-                            @foreach($user->roles as $id => $roles)
-                                <span class="label label-info label-many">{{ $roles->title }}</span>
-                            @endforeach
+                            {{ $timeEntry->end_time }}
                         </td>
                     </tr>
                 </tbody>
@@ -59,14 +57,7 @@
             </a>
         </div>
 
-        <nav class="mb-3">
-            <div class="nav nav-tabs">
 
-            </div>
-        </nav>
-        <div class="tab-content">
-
-        </div>
     </div>
 </div>
 @endsection
