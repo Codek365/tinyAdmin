@@ -14,9 +14,9 @@
                 <label for="title">{{ trans('cruds.role.fields.title') }}*</label>
                 <input type="text" id="title" name="title" class="form-control" value="{{ old('title', isset($role) ? $role->title : '') }}" required>
                 @if($errors->has('title'))
-                    <p class="help-block">
+                    <em class="invalid-feedback">
                         {{ $errors->first('title') }}
-                    </p>
+                    </em>
                 @endif
                 <p class="helper-block">
                     {{ trans('cruds.role.fields.title_helper') }}
@@ -32,9 +32,9 @@
                     @endforeach
                 </select>
                 @if($errors->has('permissions'))
-                    <p class="help-block">
+                    <em class="invalid-feedback">
                         {{ $errors->first('permissions') }}
-                    </p>
+                    </em>
                 @endif
                 <p class="helper-block">
                     {{ trans('cruds.role.fields.permissions_helper') }}
