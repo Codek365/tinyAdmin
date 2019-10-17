@@ -14,9 +14,9 @@
                 <label for="title">{{ trans('cruds.permission.fields.title') }}*</label>
                 <input type="text" id="title" name="title" class="form-control" value="{{ old('title', isset($permission) ? $permission->title : '') }}" required>
                 @if($errors->has('title'))
-                    <p class="help-block">
+                    <em class="invalid-feedback">
                         {{ $errors->first('title') }}
-                    </p>
+                    </em>
                 @endif
                 <p class="helper-block">
                     {{ trans('cruds.permission.fields.title_helper') }}
