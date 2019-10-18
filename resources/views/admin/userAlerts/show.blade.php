@@ -3,7 +3,7 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.user.title') }}
+        {{ trans('global.show') }} {{ trans('cruds.userAlert.title') }}
     </div>
 
     <div class="card-body">
@@ -12,44 +12,44 @@
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.user.fields.id') }}
+                            {{ trans('cruds.userAlert.fields.id') }}
                         </th>
                         <td>
-                            {{ $user->id }}
+                            {{ $userAlert->id }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.user.fields.name') }}
+                            {{ trans('cruds.userAlert.fields.alert_text') }}
                         </th>
                         <td>
-                            {{ $user->name }}
+                            {{ $userAlert->alert_text }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.user.fields.email') }}
+                            {{ trans('cruds.userAlert.fields.alert_link') }}
                         </th>
                         <td>
-                            {{ $user->email }}
+                            {{ $userAlert->alert_link }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.user.fields.email_verified_at') }}
+                            Users
                         </th>
                         <td>
-                            {{ $user->email_verified_at }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            Roles
-                        </th>
-                        <td>
-                            @foreach($user->roles as $id => $roles)
-                                <span class="label label-info label-many">{{ $roles->title }}</span>
+                            @foreach($userAlert->users as $id => $user)
+                                <span class="label label-info label-many">{{ $user->name }}</span>
                             @endforeach
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.userAlert.fields.created_at') }}
+                        </th>
+                        <td>
+                            {{ $userAlert->created_at }}
                         </td>
                     </tr>
                 </tbody>
@@ -59,14 +59,7 @@
             </a>
         </div>
 
-        <nav class="mb-3">
-            <div class="nav nav-tabs">
 
-            </div>
-        </nav>
-        <div class="tab-content">
-
-        </div>
     </div>
 </div>
 @endsection
