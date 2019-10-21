@@ -45,6 +45,19 @@
                     {{ trans('cruds.user.fields.password_helper') }}
                 </p>
             </div>
+            <div class="form-group {{ $errors->has('approved') ? 'has-error' : '' }}">
+                <label for="approved">{{ trans('cruds.user.fields.approved') }}</label>
+                <input name="approved" type="hidden" value="0">
+                <input value="1" type="checkbox" id="approved" name="approved" {{ old('approved', 0) == 1 ? 'checked' : '' }}>
+                @if($errors->has('approved'))
+                    <p class="help-block">
+                        {{ $errors->first('approved') }}
+                    </p>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.user.fields.approved_helper') }}
+                </p>
+            </div>
             <div class="form-group {{ $errors->has('roles') ? 'has-error' : '' }}">
                 <label for="roles">{{ trans('cruds.user.fields.roles') }}*
                     <span class="btn btn-info btn-xs select-all">{{ trans('global.select_all') }}</span>
