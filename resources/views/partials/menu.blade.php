@@ -72,6 +72,81 @@
                         </ul>
                     </li>
                 @endcan
+                @can('time_management_access')
+                    <li class="nav-item has-treeview {{ request()->is('admin/time-work-types*') ? 'menu-open' : '' }} {{ request()->is('admin/time-projects*') ? 'menu-open' : '' }} {{ request()->is('admin/time-entries*') ? 'menu-open' : '' }} {{ request()->is('admin/time-reports*') ? 'menu-open' : '' }}">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="fa-fw fas fa-clock">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.timeManagement.title') }}</span>
+                                <i class="right fa fa-fw fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            @can('time_work_type_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.time-work-types.index") }}" class="nav-link {{ request()->is('admin/time-work-types') || request()->is('admin/time-work-types/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-th">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('cruds.timeWorkType.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('time_project_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.time-projects.index") }}" class="nav-link {{ request()->is('admin/time-projects') || request()->is('admin/time-projects/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-briefcase">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('cruds.timeProject.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('time_entry_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.time-entries.index") }}" class="nav-link {{ request()->is('admin/time-entries') || request()->is('admin/time-entries/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-briefcase">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('cruds.timeEntry.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('time_report_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.time-reports.index") }}" class="nav-link {{ request()->is('admin/time-reports') || request()->is('admin/time-reports/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-chart-line">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('cruds.timeReport.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                        </ul>
+                    </li>
+                @endcan
+                @can('setting_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.settings.index") }}" class="nav-link {{ request()->is('admin/settings') || request()->is('admin/settings/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-cogs">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.setting.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
                 <li class="nav-item">
                     <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                         <p>

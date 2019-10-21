@@ -35,6 +35,12 @@
                             {{ trans('cruds.user.fields.email_verified_at') }}
                         </th>
                         <th>
+                            {{ trans('cruds.user.fields.approved') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.user.fields.verified') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.user.fields.roles') }}
                         </th>
                         <th>
@@ -59,6 +65,12 @@
                             </td>
                             <td>
                                 {{ $user->email_verified_at ?? '' }}
+                            </td>
+                            <td>
+                                {{ $user->approved ? trans('global.yes') : trans('global.no') }}
+                            </td>
+                            <td>
+                                {{ $user->verified ? trans('global.yes') : trans('global.no') }}
                             </td>
                             <td>
                                 @foreach($user->roles as $key => $item)
