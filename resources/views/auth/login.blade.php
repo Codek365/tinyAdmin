@@ -61,7 +61,9 @@
                 </a>
             </p>
             <p class="mb-0">
-
+                <a class="text-center" href="{{ route('register') }}">
+                    {{ trans('global.register') }}
+                </a>
             </p>
             <p class="mb-1">
 

@@ -72,6 +72,130 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => '16',
                 'title' => 'user_access',
             ],
+            [
+                'id'    => '17',
+                'title' => 'time_management_access',
+            ],
+            [
+                'id'    => '18',
+                'title' => 'time_work_type_create',
+            ],
+            [
+                'id'    => '19',
+                'title' => 'time_work_type_edit',
+            ],
+            [
+                'id'    => '20',
+                'title' => 'time_work_type_show',
+            ],
+            [
+                'id'    => '21',
+                'title' => 'time_work_type_delete',
+            ],
+            [
+                'id'    => '22',
+                'title' => 'time_work_type_access',
+            ],
+            [
+                'id'    => '23',
+                'title' => 'time_project_create',
+            ],
+            [
+                'id'    => '24',
+                'title' => 'time_project_edit',
+            ],
+            [
+                'id'    => '25',
+                'title' => 'time_project_show',
+            ],
+            [
+                'id'    => '26',
+                'title' => 'time_project_delete',
+            ],
+            [
+                'id'    => '27',
+                'title' => 'time_project_access',
+            ],
+            [
+                'id'    => '28',
+                'title' => 'time_entry_create',
+            ],
+            [
+                'id'    => '29',
+                'title' => 'time_entry_edit',
+            ],
+            [
+                'id'    => '30',
+                'title' => 'time_entry_show',
+            ],
+            [
+                'id'    => '31',
+                'title' => 'time_entry_delete',
+            ],
+            [
+                'id'    => '32',
+                'title' => 'time_entry_access',
+            ],
+            [
+                'id'    => '33',
+                'title' => 'time_report_create',
+            ],
+            [
+                'id'    => '34',
+                'title' => 'time_report_edit',
+            ],
+            [
+                'id'    => '35',
+                'title' => 'time_report_show',
+            ],
+            [
+                'id'    => '36',
+                'title' => 'time_report_delete',
+            ],
+            [
+                'id'    => '37',
+                'title' => 'time_report_access',
+            ],
+            [
+                'id'    => '38',
+                'title' => 'setting_create',
+            ],
+            [
+                'id'    => '39',
+                'title' => 'setting_edit',
+            ],
+            [
+                'id'    => '40',
+                'title' => 'setting_show',
+            ],
+            [
+                'id'    => '41',
+                'title' => 'setting_delete',
+            ],
+            [
+                'id'    => '42',
+                'title' => 'setting_access',
+            ],
+            [
+                'id'    => '43',
+                'title' => 'user_zalo_create',
+            ],
+            [
+                'id'    => '44',
+                'title' => 'user_zalo_edit',
+            ],
+            [
+                'id'    => '45',
+                'title' => 'user_zalo_show',
+            ],
+            [
+                'id'    => '46',
+                'title' => 'user_zalo_delete',
+            ],
+            [
+                'id'    => '47',
+                'title' => 'user_zalo_access',
+            ],
         ];
 
         Permission::insert($permissions);
